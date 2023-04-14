@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
@@ -71,7 +75,76 @@
       <p class="banner__texto">
         Encontre em nossa estante o que precisa para seu desenvolvimento!
       </p>
-      <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+      <input
+        type="search"
+        class="banner__pesquisa"
+        placeholder="Qual será sua próxima leitura?"
+      />
     </section>
+    <section class="carrossel">
+      <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              src="img/ApacheKafka.svg"
+              alt="Livro sobre apache kafta e spring boot da alura books"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="img/Liderança.svg"
+              alt="Livro sobre liderança em design da alura books"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="img/Javascript.svg"
+              alt="Livro sobre javascript assertivo da alura books"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="img/Guia Front-end.svg"
+              alt="Guia front end da alura books"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="img/Acessibilidade.svg"
+              alt="Livro sobre acessibilidade da alura books"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="img/ReactNative.svg"
+              alt="Livro sobre react native da alura books"
+            />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+
+    </script>
   </body>
 </html>
